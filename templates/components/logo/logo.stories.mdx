@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs';
+
+import footer from './assets/footer.png';
+import main from './assets/main.svg';
+
+<Meta title="Atoms/Logo" component="frog-logo" />
+
+<style>{`.background {padding: var(--spacing-xl);}`}</style>
+
+## Main
+
+<frog-logo class="background bg-brand-accessible">
+  <img slot="logo" src={main} />
+</frog-logo>
+
+```html
+<frog-logo></frog-logo>
+```
+
+## Footer
+
+<frog-logo variant="footer" class="background bg-brand-accessible">
+  <img slot="logo" src={footer} />
+</frog-logo>
+
+```html
+<frog-logo variant="footer"></frog-logo>
+```

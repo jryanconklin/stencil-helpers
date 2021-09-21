@@ -1,0 +1,70 @@
+/*
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Frog Grid CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+:host {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-content: center;
+  align-content: center;
+}
+
+@media (--screens-lg) {
+  :host([variant='2-2']) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :host([variant='3-1']) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    slot[name='one']::slotted(*) {
+      grid-column: span 2 / span 2;
+    }
+  }
+
+  :host([variant='1-3']) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    slot[name='two']::slotted(*) {
+      grid-column: span 2 / span 2;
+    }
+  }
+
+  :host([variant='3-3']) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :host([variant='4-4']) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :host([variant='smart']):host([items='2']) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :host([variant='smart']):host([items='3']) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :host([items='4']) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (--screens-xl) {
+  :host([variant='4-4']) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  :host([items='4']) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  :host([variant='1-4']) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    slot[name='two']::slotted(*) {
+      grid-column: span 3 / span 3;
+    }
+  }
+}

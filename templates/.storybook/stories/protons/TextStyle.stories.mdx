@@ -1,0 +1,77 @@
+import { html } from 'lit-html';
+import { Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Protons/Text Styles" />
+
+# Text Style
+
+The consistent and finite set of spacing used throughout components.
+
+<Story name="Text Styles">
+  {() => {
+    return html`
+      <style>
+        table {
+          border-collapse: collapse;
+          text-align: left;
+          width: 100%;
+        }
+        table tr {
+          background: var(--color-white);
+          border: var(--border-base);
+          border-color: var(--color-brand-dark);
+        }
+        table th,
+        table td {
+          padding: var(--spacing-sm) var(--spacing-md);
+        }
+      </style>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">CSS Class</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>.small</code></td>
+            <td class="small">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.body-sm</code></td>
+            <td class="body-sm">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.body-lg</code></td>
+            <td class="body-lg">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.hallmark-sm</code></td>
+            <td class="hallmark-sm">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.hallmark-lg</code></td>
+            <td class="hallmark-lg">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.headline-md</code></td>
+            <td class="headline-md">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.headline-lg</code></td>
+            <td class="headline-lg">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.headline-xl</code></td>
+            <td class="headline-xl">Opening doors to all things Jewish</td>
+          </tr>
+          <tr>
+            <td><code>.headline-2xl</code></td>
+            <td class="headline-2xl">Opening doors to all things Jewish</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+  }}
+</Story>

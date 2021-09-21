@@ -1,0 +1,9 @@
+dist/
+www/
+loader/
+storybook-static/
+custom-elements.json
+renovate.json
+src/components.d.ts
+.circleci/
+*.md

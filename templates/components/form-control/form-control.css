@@ -1,0 +1,244 @@
+/*
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Frog Form Control CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+:host {
+  display: block;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+                                                     Base
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+::slotted(button),
+::slotted(input),
+::slotted(optgroup),
+::slotted(select),
+::slotted(textarea) {
+  margin: var(--spacing-0);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::slotted(button),
+::slotted(select) {
+  text-transform: none;
+}
+
+::slotted(input),
+::slotted(textarea),
+::slotted(select) {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+::slotted(input[type='color']),
+::slotted(input[type='date']),
+::slotted(input[type='datetime-local']),
+::slotted(input[type='email']),
+::slotted(input[type='month']),
+::slotted(input[type='number']),
+::slotted(input[type='password']),
+::slotted(input[type='search']),
+::slotted(input[type='tel']),
+::slotted(input[type='text']),
+::slotted(input[type='time']),
+::slotted(input[type='url']),
+::slotted(input[type='week']),
+::slotted(textarea),
+::slotted(select) {
+  color: var(--neutral-gray-1);
+  background-color: var(--color-white);
+  background-clip: padding-box;
+  appearance: none;
+  border: var(--border-base);
+  border-color: var(--color-brand-accessible);
+  border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-none) var(--border-radius-none);
+  transition: border-color var(--durations-quickly) ease-in-out, box-shadow var(--durations-quickly) ease-in-out;
+}
+
+::slotted(input:focus),
+::slotted(textarea:focus),
+::slotted(select:focus) {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border-color: var(--color-brand-dark);
+  outline: 0;
+  box-shadow: var(--shadow-border-highlight);
+}
+
+::slotted(input[type='date']:required),
+::slotted(input[type='date'][aria-required='true']),
+::slotted(input[type='datetime-local']:required),
+::slotted(input[type='datetime-local'][aria-required='true']),
+::slotted(input[type='email']:required),
+::slotted(input[type='email'][aria-required='true']),
+::slotted(input[type='month']:required),
+::slotted(input[type='month'][aria-required='true']),
+::slotted(input[type='number']:required),
+::slotted(input[type='number'][aria-required='true']),
+::slotted(input[type='password']:required),
+::slotted(input[type='password'][aria-required='true']),
+::slotted(input[type='search']:required),
+::slotted(input[type='search'][aria-required='true']),
+::slotted(input[type='tel']:required),
+::slotted(input[type='tel'][aria-required='true']),
+::slotted(input[type='text']:required),
+::slotted(input[type='text'][aria-required='true']),
+::slotted(input[type='time']:required),
+::slotted(input[type='time'][aria-required='true']),
+::slotted(input[type='url']:required),
+::slotted(input[type='url'][aria-required='true']),
+::slotted(input[type='week']:required),
+::slotted(input[type='week'][aria-required='true']),
+::slotted(textarea:required),
+::slotted(textarea[aria-required='true']) {
+  background-image: var(--icons-solid-star-orange);
+  background-size: var(--spacing-sm) var(--spacing-sm);
+  background-position: right var(--spacing-xs) top var(--spacing-xs);
+  background-repeat: no-repeat;
+}
+
+::slotted(*):disabled,
+::slotted(*)[readonly] {
+  opacity: var(--opacity-semi-invisible);
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::slotted(input),
+  ::slotted(textarea),
+  ::slotted(select) {
+    transition: none;
+  }
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+                                                  Input Buttons
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+::slotted(input[type='button']),
+::slotted(input[type='image']),
+::slotted(input[type='reset']),
+::slotted(input[type='submit']) {
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-base) var(--spacing-md) var(--spacing-base) var(--spacing-md);
+}
+
+::slotted(input[type='button']),
+::slotted(input[type='reset']),
+::slotted(input[type='submit']) {
+  display: inline-block;
+}
+
+::slotted(input[type='image']) {
+  display: block;
+}
+
+::slotted(input[type='button']),
+::slotted(input[type='image']),
+::slotted(input[type='submit']) {
+  background-color: var(--color-orange);
+  color: var(--color-black);
+  border: none;
+}
+
+::slotted(input[type='image']) {
+  width: auto;
+}
+
+::slotted(input[type='button']:hover),
+::slotted(input[type='image']:hover),
+::slotted(input[type='submit']:hover) {
+  filter: brightness(90%);
+}
+
+::slotted(input[type='reset']) {
+  background-color: var(--color-white);
+  color: var(--color-brand-accessible);
+  border: var(--border-thick);
+  border-color: var(--color-brand-accessible);
+}
+
+::slotted(input[type='reset']:hover) {
+  background-color: var(--color-brand-accessible);
+  color: var(--color-white);
+  border-color: var(--neutral-transparent);
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+                                                  Misc Inputs
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+::slotted(input[type='checkbox']),
+::slotted(input[type='radio']) {
+  height: var(--spacing-base);
+  width: var(--spacing-base);
+}
+
+::slotted(input[type='checkbox']) {
+  border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-none) var(--border-radius-none);
+}
+
+::slotted(input[type='color']) {
+  outline: none;
+  height: var(--spacing-xl);
+  width: var(--spacing-xl);
+}
+
+::slotted(input[type='file']) {
+  overflow: hidden;
+}
+
+::slotted(input[type='file']:not(:disabled):not([readonly])) {
+  cursor: pointer;
+}
+
+::slotted(input[type='file'])::file-selector-button {
+  padding: var(--spacing-2xs) var(--spacing-sm);
+  background-color: var(--color-white);
+  color: var(--color-brand-accessible);
+  border: var(--border-thick);
+  border-color: var(--color-brand-accessible);
+  transition: color var(--durations-quickly) ease-in-out, background-color var(--durations-quickly) ease-in-out, border-color var(--durations-quickly) ease-in-out,
+    box-shadow var(--durations-quickly) ease-in-out;
+}
+
+::slotted(input[type='radio']) {
+  border-radius: 50%;
+}
+
+::slotted(input[type='range']) {
+  height: var(--spacing-md);
+  background-color: var(--neutral-transparent);
+  padding: var(--spacing-0);
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+                                                     Label
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+::slotted(label) {
+  display: inline-block;
+}

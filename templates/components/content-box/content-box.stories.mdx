@@ -1,0 +1,95 @@
+import { html } from 'lit-html';
+import { Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Atoms/Content Box" component="frog-content-box" />
+
+## Spacing Properties
+
+Use the `py` and `px` properties to set horizontal and vertical spacing on a content box. Defaults to no spacing and only
+a limited set of sm-xl are available. Example: `<frog-content-box py="sm" px="sm"></frog-content-box>`.
+
+## Display Variants
+
+### Shadow
+
+Apply the `shadow` variant to wrap content in a shadow box with slight hover effect. Example: `<frog-content-box variant="shadow"></frog-content-box>`
+
+<Story name="Shadow">
+  {() => {
+    return html`
+      <frog-content-box variant="shadow" py="sm" px="sm">
+        <div>
+          Hac tellus magna urna nunc ipsum at cubilia parturient, auctor semper felis risus pretium gravida hendrerit, posuere magnis fermentum placerat nibh molestie turpis.
+          Inceptos auctor libero sociosqu interdum porttitor suspendisse nascetur dis tincidunt dictum turpis, molestie platea rhoncus torquent vehicula massa facilisi conubia
+          metus rutrum cubilia pellentesque, justo consequat tellus velit elit felis neque urna laoreet cras. Metus fusce adipiscing curabitur arcu quam facilisi vivamus nibh ante
+          aliquet, erat cursus cum donec diam vitae sit magna semper, faucibus morbi dictumst eget hac primis condimentum consequat penatibus.
+        </div>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+```html
+<frog-content-box variant="shadow" py="sm" px="sm">
+  <div>...</div>
+</frog-content-box>
+```
+
+### Blue
+
+Apply the `blue` variant to wrap content in a blue border. Example: `<frog-content-box variant="blue"></frog-content-box>`
+
+<Story name="Blue">
+  {() => {
+    return html`
+      <frog-content-box variant="blue" py="sm" px="sm">
+        <div>
+          Hac tellus magna urna nunc ipsum at cubilia parturient, auctor semper felis risus pretium gravida hendrerit, posuere magnis fermentum placerat nibh molestie turpis.
+          Inceptos auctor libero sociosqu interdum porttitor suspendisse nascetur dis tincidunt dictum turpis, molestie platea rhoncus torquent vehicula massa facilisi conubia
+          metus rutrum cubilia pellentesque, justo consequat tellus velit elit felis neque urna laoreet cras. Metus fusce adipiscing curabitur arcu quam facilisi vivamus nibh ante
+          aliquet, erat cursus cum donec diam vitae sit magna semper, faucibus morbi dictumst eget hac primis condimentum consequat penatibus.
+        </div>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+```html
+<frog-content-box variant="blue" py="sm" px="sm">
+  <div>...</div>
+</frog-content-box>
+```
+
+## Grid Items
+
+You can pass grid items to the box to wrap grid content.
+
+<Story name="Grid Items">
+  {() => {
+    return html`
+      <frog-content-box variant="shadow" py="xl" px="xl">
+        <frog-grid variant="smart" items="2">
+          <div>
+            Hac vel vivamus eu nam at magnis sociosqu commodo, dictumst sollicitudin feugiat montes felis mus adipiscing scelerisque nascetur, elit parturient ridiculus porta
+            habitant diam lorem. Taciti egestas nisi est interdum dignissim nam felis montes nibh augue, class orci erat libero ridiculus facilisi primis aenean conubia sit, ac
+            fringilla tincidunt purus hac sociosqu rhoncus habitasse vehicula.
+          </div>
+          <div>
+            Ut ad commodo habitant phasellus litora montes dignissim enim elit, cursus semper tellus taciti facilisi libero nam luctus felis, tristique tincidunt orci dis leo
+            vulputate magnis himenaeos. Congue tempor risus cubilia cras duis interdum aliquam montes, lectus quis ante placerat consectetur non libero, sociosqu sem magnis gravida
+            mattis phasellus arcu.
+          </div>
+        </frog-grid>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+```html
+<frog-content-box variant="shadow" py="xl" px="xl">
+  <frog-grid variant="smart" items="2">
+    <div>...</div>
+    <div>...</div>
+  </frog-grid>
+</frog-content-box>
+```

@@ -1,0 +1,137 @@
+import { html } from 'lit-html';
+import { Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Atoms/Form Control" component="frog-content-box" />
+
+## Input
+
+Input need only be wrapped in the `frog-form-control` component.
+
+<Story name="Input">
+  {() => {
+    return html`
+      <frog-content-box class="mx-auto w-7-12" variant="shadow" py="xl" px="lg">
+        <frog-form-control>
+          <input type="text" placeholder="An Example Text Input" />
+        </frog-form-control>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+## Select
+
+Base selects need only be wrapped in the `frog-form-control` component.
+
+<Story name="Select">
+  {() => {
+    return html`
+      <frog-content-box class="mx-auto w-7-12" variant="shadow" py="xl" px="lg">
+        <frog-form-control>
+          <select>
+            <option>Viverra bibendum</option>
+            <option>Lectus</option>
+            <option>Nostra sapien lobortis</option>
+            <option>Rhoncus pellentesque</option>
+            <option>Pulvinar</option>
+          </select>
+        </frog-form-control>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+## Textarea
+
+Textarea need only be wrapped in the `frog-form-control` component.
+
+<Story name="Textarea">
+  {() => {
+    return html`
+      <frog-content-box class="mx-auto w-7-12" variant="shadow" py="xl" px="lg">
+        <frog-form-control>
+          <textarea placeholder="Start typing..."></textarea>
+        </frog-form-control>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+## Contact Block
+
+The full contact block is assembled from a combination of components. Including the `frog-content-box` for borders, the
+`frog-grid` to align items, and various utility classes to control vertical spacing and width.
+
+<Story name="Contact Block">
+  {() => {
+    return html`
+      <frog-content-box class="mx-auto w-7-12" variant="shadow" py="xl" px="lg">
+        <form action="">
+          <frog-grid class="mb-base" variant="smart" items="2">
+            <frog-form-control>
+              <input required type="text" placeholder="First Name" />
+            </frog-form-control>
+            <frog-form-control>
+              <input required type="text" placeholder="Last Name" />
+            </frog-form-control>
+          </frog-grid>
+          <frog-grid variant="1-1">
+            <div slot="one">
+              <frog-form-control class="mb-base">
+                <input required type="email" placeholder="Email" />
+              </frog-form-control>
+              <frog-form-control class="mb-base">
+                <input required type="tel" placeholder="Phone" />
+              </frog-form-control>
+              <frog-form-control class="mb-lg">
+                <textarea required placeholder="Your message..."></textarea>
+              </frog-form-control>
+              <frog-text class="mb-base text-center" variant="body-sm" tag="div"> We will typically respond to your email within 2 business days. </frog-text>
+              <frog-form-control class="text-center mb-base">
+                <input class="mb-base w-7-12" type="button" value="My Button Value" />
+              </frog-form-control>
+              <frog-text class="text-center" variant="small" tag="div">
+                <a class="text-inherit" href="#">Our privacy policy</a>
+              </frog-text>
+            </div>
+          </frog-grid>
+        </form>
+      </frog-content-box>
+    `;
+  }}
+</Story>
+
+```html
+<frog-content-box class="mx-auto w-7-12" variant="shadow" py="xl" px="lg">
+  <form action="">
+    <frog-grid class="mb-base" variant="smart" items="2">
+      <frog-form-control>
+        <input type="text" placeholder="First Name" />
+      </frog-form-control>
+      <frog-form-control>
+        <input type="text" placeholder="Last Name" />
+      </frog-form-control>
+    </frog-grid>
+    <frog-grid variant="1-1">
+      <div slot="one">
+        <frog-form-control class="mb-base">
+          <input type="email" placeholder="Email" />
+        </frog-form-control>
+        <frog-form-control class="mb-base">
+          <input type="tel" placeholder="Phone" />
+        </frog-form-control>
+        <frog-form-control class="mb-lg">
+          <textarea placeholder="Your message..."></textarea>
+        </frog-form-control>
+        <frog-text class="mb-base text-center" variant="body-sm" tag="div"> We will typically respond to your email within 2 business days. </frog-text>
+        <frog-form-control class="text-center mb-base">
+          <input class="mb-base w-7-12" type="button" value="My Button Value" />
+        </frog-form-control>
+        <frog-text class="text-center" variant="small" tag="div">
+          <a class="text-inherit" href="#">Our privacy policy</a>
+        </frog-text>
+      </div>
+    </frog-grid>
+  </form>
+</frog-content-box>
+```

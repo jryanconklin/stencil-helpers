@@ -1,0 +1,92 @@
+import { html } from 'lit-html';
+import { Meta, Story } from '@storybook/addon-docs';
+
+<!-- Utility Functions -->
+
+import { extractPx } from '../../../src/utils/extract-px';
+import { flattenTokens } from '../../../src/utils/flatten-tokens';
+
+<!-- Style Library Tokens -->
+
+import spacing from '../../../src/tokens/spacing.json';
+
+<Meta title="Protons/Spacing" component="Spacing" />
+
+# Spacing
+
+The consistent and finite set of spacing used throughout components.
+
+## All Spacing Table
+
+This view shows all site spacing values and associated CSS Custom Properties.
+
+<Story name="All Spacings Table">
+  {() => {
+    const data = Object.entries(flattenTokens(spacing)).map(
+      ([name, value]) => html`
+        <tr>
+          <td>--${name}</td>
+          <td>${value}</td>
+          <td>${extractPx(value)}</td>
+          <td>
+            <div style="border: 1px solid var(--color-brand); height: var(--spacing-base); width: var(--${name})"></div>
+          </td>
+        </tr>
+      `,
+    );
+    return html`
+      <style>
+        table {
+          border-collapse: collapse;
+          text-align: left;
+          width: 100%;
+        }
+        table tr {
+          background: var(--color-white);
+          border: var(--border-base);
+          border-color: var(--color-brand-dark);
+        }
+        table th,
+        table td {
+          padding: var(--spacing-sm) var(--spacing-md);
+        }
+      </style>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">CSS Custom Property</th>
+            <th scope="col">Size</th>
+            <th scope="col">Pixels</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${data}
+        </tbody>
+      </table>
+    `;
+  }}
+</Story>
+
+## Vertical Rhythm
+
+Demonstrate the size of each spacing item relative to a full-width screen.
+
+<Story name="Vertical Rhythm">
+  {() => {
+    const data = Object.entries(flattenTokens(spacing)).map(
+      ([name, value]) => html`
+        <div style="text-align: center; background-color: var(--color-orange); height: var(--${name}); width: 100%; margin-bottom: var(--spacing-xl);">--${name}: ${value}</div>
+      `,
+    );
+    return html`
+      <style>
+        .spacing-container {
+          width: 100%;
+          background-color: var(--neutral-gray-5);
+        }
+      </style>
+      <div class="spacing-container">${data}</div>
+    `;
+  }}
+</Story>

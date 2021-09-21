@@ -1,0 +1,99 @@
+/*
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Frog Content Box CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+:host {
+  display: block;
+}
+
+/* Y-Axis Spacing */
+:host([py='sm']) {
+  .content-box {
+    --y-space: var(--spacing-sm);
+  }
+}
+
+:host([py='base']) {
+  .content-box {
+    --y-space: var(--spacing-base);
+  }
+}
+
+:host([py='md']) {
+  .content-box {
+    --y-space: var(--spacing-md);
+  }
+}
+
+:host([py='lg']) {
+  .content-box {
+    --y-space: var(--spacing-lg);
+  }
+}
+
+:host([py='xl']) {
+  .content-box {
+    --y-space: var(--spacing-xl);
+  }
+}
+
+/* X-Axis Spacing */
+:host([px='sm']) {
+  .content-box {
+    --x-space: var(--spacing-sm);
+  }
+}
+
+:host([px='base']) {
+  .content-box {
+    --x-space: var(--spacing-base);
+  }
+}
+
+:host([px='md']) {
+  .content-box {
+    --x-space: var(--spacing-md);
+  }
+}
+
+:host([px='lg']) {
+  .content-box {
+    --x-space: var(--spacing-lg);
+  }
+}
+
+:host([px='xl']) {
+  .content-box {
+    --x-space: var(--spacing-xl);
+  }
+}
+
+.content-box {
+  --y-space: var(--spacing-0);
+  --x-space: var(--spacing-0);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-base);
+  padding: var(--y-space) var(--x-space) var(--y-space) var(--x-space);
+}
+
+.content-box--shadow {
+  border: var(--border-base);
+  border-color: var(--neutral-gray-4);
+  box-shadow: var(--shadow-border-base);
+  &:hover,
+  &:focus {
+    box-shadow: var(--shadow-border-hover);
+  }
+}
+
+.content-box--blue {
+  border: var(--border-thick);
+  border-color: var(--color-brand-accessible);
+}

@@ -1,0 +1,69 @@
+import { html } from 'lit-html';
+import { ifDefined } from 'lit-html/directives/if-defined';
+import { Meta, Story } from '@storybook/addon-docs';
+
+import data from './inputs.json';
+
+<Meta title="Atoms/Inputs" component="ts-form-control" />
+
+## Input Form Controls
+
+The descriptions are provided by [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input).
+
+### Code
+
+```html
+<ts-form-control>
+  <input type="text" />
+</ts-form-control>
+```
+
+### Example
+
+<Story name="Inputs">
+  {() => {
+    const demo = Object.entries(data.inputs).map(
+      element => html`
+        <tr>
+          <td>${element[0]}</td>
+          <td>${element[1].description}</td>
+          <td>
+            <ts-form-control
+              ><input type="${element[0]}" id="form-${element[0]}" value="${ifDefined(element[1].value)}" placeholder="${ifDefined(element[1].placeholder)}"
+            /></ts-form-control>
+          </td>
+        </tr>
+      `,
+    );
+    return html`
+      <style>
+        table {
+          border-collapse: collapse;
+          text-align: left;
+          width: 100%;
+        }
+        table tr {
+          background: var(--color-white);
+          border: var(--border-base);
+          border-color: var(--color-brand-dark);
+        }
+        table th,
+        table td {
+          padding: var(--spacing-sm) var(--spacing-md);
+        }
+      </style>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rendered</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${demo}
+        </tbody>
+      </table>
+    `;
+  }}
+</Story>

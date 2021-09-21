@@ -1,0 +1,156 @@
+/*
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Frog Icon CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+:host {
+  display: inline-block;
+}
+
+:host svg {
+  display: block;
+}
+
+/* Colors */
+.icon-outline-black {
+  svg {
+    stroke: var(--color-black);
+  }
+}
+
+.icon-solid-black {
+  svg {
+    fill: var(--color-black);
+  }
+}
+
+.icon-outline-white {
+  svg {
+    stroke: var(--color-white);
+  }
+}
+
+.icon-solid-white {
+  svg {
+    fill: var(--color-white);
+  }
+}
+
+.icon-outline-gold {
+  svg {
+    stroke: var(--color-gold);
+  }
+}
+
+.icon-solid-gold {
+  svg {
+    fill: var(--color-gold);
+  }
+}
+
+.icon-outline-orange {
+  svg {
+    stroke: var(--color-orange);
+  }
+}
+
+.icon-solid-orange {
+  svg {
+    fill: var(--color-orange);
+  }
+}
+
+.icon-outline-brand {
+  svg {
+    stroke: var(--color-brand);
+  }
+}
+
+.icon-solid-brand {
+  svg {
+    fill: var(--color-brand);
+  }
+}
+
+.icon-outline-brand-accessible {
+  svg {
+    stroke: var(--color-brand-accessible);
+  }
+}
+
+.icon-solid-brand-accessible {
+  svg {
+    fill: var(--color-brand-accessible);
+  }
+}
+
+.icon-outline-brand-light {
+  svg {
+    stroke: var(--color-brand-light);
+  }
+}
+
+.icon-solid-brand-light {
+  svg {
+    fill: var(--color-brand-light);
+  }
+}
+
+.icon-outline-brand-dark {
+  svg {
+    stroke: var(--color-brand-dark);
+  }
+}
+
+.icon-solid-brand-dark {
+  svg {
+    fill: var(--color-brand-dark);
+  }
+}
+
+.icon-outline-transparent {
+  svg {
+    stroke: var(--neutral-transparent);
+  }
+}
+
+.icon-solid-transparent {
+  svg {
+    fill: var(--neutral-transparent);
+  }
+}
+
+/* Size Styles */
+
+.icon-full svg {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-xs svg {
+  height: var(--spacing-xs);
+  width: var(--spacing-xs);
+}
+
+.icon-sm svg {
+  height: var(--spacing-sm);
+  width: var(--spacing-sm);
+}
+
+.icon-base svg {
+  height: var(--spacing-base);
+  width: var(--spacing-base);
+}
+
+.icon-md svg {
+  height: var(--spacing-md);
+  width: var(--spacing-md);
+}
+
+.icon-lg svg {
+  height: var(--spacing-lg);
+  width: var(--spacing-lg);
+}

@@ -1,0 +1,24 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+<!-- Utility Functions -->
+
+import { flattenTokens } from '../../../src/utils/flatten-tokens';
+
+<!-- Style Library Tokens -->
+
+import colors from '../../../src/tokens/color.json';
+
+<Meta title="Protons/ColorPalette" />
+
+# Color Palette
+
+The JFOC Design Color Palette used throughout components.
+
+## Colors and Neutral Hues
+
+All CSS Custom Properties should be dash cased. For example, `var(color-brand-accessible)`.
+
+<ColorPalette>
+  <ColorItem title="Color" subtitle="Prefix color name with --color- for CSS Custom Property" colors={flattenTokens(colors.color)}></ColorItem>
+  <ColorItem title="Neutral" subtitle="Prefix color name with --neutral- for CSS Custom Property" colors={flattenTokens(colors.neutral)}></ColorItem>
+</ColorPalette>
