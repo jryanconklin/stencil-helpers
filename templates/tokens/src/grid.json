@@ -1,0 +1,7 @@
+{
+  "grid": {
+    "gap": {
+      "value": "{spacing.base.value}"
+    }
+  }
+}

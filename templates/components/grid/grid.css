@@ -8,13 +8,13 @@ Frog Grid CSS File
 
 :host {
   display: grid;
-  gap: var(--spacing-lg);
+  gap: var(--grid-gap);
   grid-template-columns: repeat(1, minmax(0, 1fr));
   justify-content: center;
   align-content: center;
 }
 
-@media (--screens-lg) {
+@media (--bp-lg) {
   :host([variant='2-2']) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -54,7 +54,7 @@ Frog Grid CSS File
   }
 }
 
-@media (--screens-xl) {
+@media (--bp-xl) {
   :host([variant='4-4']) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
