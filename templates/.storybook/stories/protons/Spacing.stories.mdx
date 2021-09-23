@@ -8,7 +8,7 @@ import { flattenTokens } from '../../../src/utils/flatten-tokens';
 
 <!-- Style Library Tokens -->
 
-import spacing from '../../../src/tokens/spacing.json';
+import spacing from '../../../tokens/src/spacing.json';
 
 <Meta title="Protons/Spacing" component="Spacing" />
 
@@ -64,29 +64,6 @@ This view shows all site spacing values and associated CSS Custom Properties.
           ${data}
         </tbody>
       </table>
-    `;
-  }}
-</Story>
-
-## Vertical Rhythm
-
-Demonstrate the size of each spacing item relative to a full-width screen.
-
-<Story name="Vertical Rhythm">
-  {() => {
-    const data = Object.entries(flattenTokens(spacing)).map(
-      ([name, value]) => html`
-        <div style="text-align: center; background-color: var(--color-orange); height: var(--${name}); width: 100%; margin-bottom: var(--spacing-xl);">--${name}: ${value}</div>
-      `,
-    );
-    return html`
-      <style>
-        .spacing-container {
-          width: 100%;
-          background-color: var(--neutral-gray-5);
-        }
-      </style>
-      <div class="spacing-container">${data}</div>
     `;
   }}
 </Story>

@@ -1,9 +1,8 @@
 import { create } from '@storybook/theming/create';
 
-import logo from './stories/assets/logo-primary.svg';
+import logo from './stories/assets/logo.svg';
 
-import color from './../../tokens/color.json';
-import typography from './../../tokens/typography.json';
+import color from './../tokens/src/color.json';
 
 export default create({
   base: 'light',
@@ -12,14 +11,13 @@ export default create({
   brandUrl: 'https://www.thinkshout.com',
   brandImage: logo,
   // Base Colors
-  colorPrimary: color.color.brand.value,
-  colorSecondary: color.color.brandAccessible.value,
+  colorPrimary: color.colors.brand.base.value,
+  colorSecondary: color.colors.brand.light.value,
   // Text Colors
-  textColor: color.color.black.value,
-  textInverseColor: color.color.white.value,
+  textColor: color.colors.black.value,
+  textInverseColor: color.colors.white.value,
   // Toolbar Colors
-  barTextColor: color.color.black.value,
+  barTextColor: color.colors.black.value,
   // Typography
-  fontBase: typography.fontFamily.sans.value,
   fontCode: 'monospace',
 });

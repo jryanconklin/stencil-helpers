@@ -7,7 +7,7 @@ import { flattenTokens } from '../../../src/utils/flatten-tokens';
 
 <!-- Style Library Tokens -->
 
-import colors from '../../../src/tokens/color.json';
+import colors from '../../../tokens/src/color.json';
 
 <Meta title="Protons/ColorAccessibility" />
 
@@ -17,7 +17,7 @@ The JFOC Brand Colors are loaded via an iframe to this [accessible brand colors]
 
 <Story name="Accessible Brand Colors">
   {() => {
-    const values = Object.values(flattenTokens(colors.color)).join(',').replaceAll('#', '');
+    const values = Object.values(flattenTokens(colors.colors)).join(',').replaceAll('#', '');
     return html`<iframe title="Accessible Brand Colors" width="800" height="800" src="https://abc.useallfive.com/?colors[]=${values}"></iframe>`;
   }}
 </Story>

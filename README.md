@@ -29,33 +29,8 @@ These steps assume you've scaffolded a Stencil project elsewhere.
 9. Add and Configure [PostCSS](templates/postcss/README.md)
 10. Configure [Tokens](templates/tokens/README.md)
 11. Configure Code Style and [Formatting](templates/formatting)
-12. Evaluate starter components in `./components` for use (consider `frog-grid` to start). 
-13. Remove default `src/components/my-component` and rebuild with `npm run build`.
-
-
-
-
-
-
-14. 
-15. Initialize Storybook via `npx sb init`, select custom > web-components. See `.storbyook` here for config updates.
- 
-16. Add formatting packages:  `eslint`, `eslint-config-prettier`, `eslint-plugin-react`, `prettier`, `svgo`.
-17. See `/configs` here for config examples.
-18. Configure scripts for local dev! Move stories, update `package.json`:
-     ```json
-     "predeploy": "npm run sb.build.prod",
-     "deploy.storybook": "storybook-to-ghpages",
-     "dev": "npm run sb.dev.watch",
-     "sb.dev": "npm run sb.wait && start-storybook -p 6006",
-     "sb.dev.watch": "concurrently -c \"#00a7e1,#e3b121,#e97135\" \"npm:wca.custom-elements\" \"npm:build.watch\" \"npm:sb.dev\"",
-     "sb.prod": "npm run sb.wait && NODE_ENV=production build-storybook -o storybook-static",
-     "sb.build.prod": "concurrently -c \"#00a7e1,#e3b121,#e97135\" \"npm:wca.custom-elements\" \"npm:build\" \"npm:sb.prod\"",
-     "sb.wait": "wait-on dist/esm/loader.js .storybook/custom-elements.json",
-     "wca.custom-elements": "wca analyze src --format json --outFile .storybook/custom-elements.json"
-     ```
-19. Run `npx sort-package-json` to sort the scripts we've added with Stencil's defaults.
-20. Evaluate and add code from this project in `/templates`.
-21. Update root npm scripts.
-22. Update to make sure `dist/` assets are installed.
-23. Scaffold Theme where this will be used.
+12. Evaluate starter components in `./components` for use (consider `frog-form-control` to start)
+13. Replace utility functions in `src/utils` with those from [templates](templates/utils)
+14. Remove default `src/components/my-component` and rebuild with `npm run build`
+15. Add [Storybook](templates/.storybook/README.md)
+16. Run `npx sort-package-json` to sort the scripts we've added with Stencil's defaults.

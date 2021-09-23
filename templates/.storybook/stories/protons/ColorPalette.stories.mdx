@@ -6,7 +6,7 @@ import { flattenTokens } from '../../../src/utils/flatten-tokens';
 
 <!-- Style Library Tokens -->
 
-import colors from '../../../src/tokens/color.json';
+import colors from '../../../tokens/src/color.json';
 
 <Meta title="Protons/ColorPalette" />
 
@@ -19,6 +19,5 @@ The JFOC Design Color Palette used throughout components.
 All CSS Custom Properties should be dash cased. For example, `var(color-brand-accessible)`.
 
 <ColorPalette>
-  <ColorItem title="Color" subtitle="Prefix color name with --color- for CSS Custom Property" colors={flattenTokens(colors.color)}></ColorItem>
-  <ColorItem title="Neutral" subtitle="Prefix color name with --neutral- for CSS Custom Property" colors={flattenTokens(colors.neutral)}></ColorItem>
+  <ColorItem title="Color" subtitle="Prefix color name with --color- for CSS Custom Property" colors={flattenTokens(colors.colors)}></ColorItem>
 </ColorPalette>

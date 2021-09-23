@@ -21,9 +21,9 @@ The descriptions are provided by [MDN](https://developer.mozilla.org/en-US/docs/
 ### Example
 
 <Story name="Inputs">
-  {() => {
-    const demo = Object.entries(data.inputs).map(
-      element => html`
+	{() => {
+		const demo = Object.entries(data.inputs).map(
+			element => html`
         <tr>
           <td>${element[0]}</td>
           <td>${element[1].description}</td>
@@ -34,8 +34,8 @@ The descriptions are provided by [MDN](https://developer.mozilla.org/en-US/docs/
           </td>
         </tr>
       `,
-    );
-    return html`
+		);
+		return html`
       <style>
         table {
           border-collapse: collapse;
@@ -43,9 +43,8 @@ The descriptions are provided by [MDN](https://developer.mozilla.org/en-US/docs/
           width: 100%;
         }
         table tr {
-          background: var(--color-white);
-          border: var(--border-base);
-          border-color: var(--color-brand-dark);
+          background: var(--colors-white);
+          border-color: var(--colors-brand-dark);
         }
         table th,
         table td {
@@ -65,5 +64,5 @@ The descriptions are provided by [MDN](https://developer.mozilla.org/en-US/docs/
         </tbody>
       </table>
     `;
-  }}
+	}}
 </Story>

@@ -4,6 +4,7 @@
  * @param {array} filtered
  * @param {array} attributes
  */
+// eslint-disable-next-line
 export const filterAttributes = (attributes: any[], filtered: string[]) => {
     return attributes.filter(a => a && !filtered.includes(a.name)).reduce((acc, { name, value }) => ({ ...acc, [name]: value }), {});
 };
@@ -22,6 +23,7 @@ export const filterAttributes = (attributes: any[], filtered: string[]) => {
  *
  */
 export const inheritAttributes = (el: HTMLElement, attributes: string[] = []) => {
+    // eslint-disable-next-line
     const attributeObject: { [k: string]: any } = {};
 
     attributes.forEach(attr => {

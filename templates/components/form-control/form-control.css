@@ -39,8 +39,6 @@ Frog Form Control CSS File
   width: 100%;
   padding: var(--spacing-base);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
 }
 
 ::slotted(input[type='color']),
@@ -58,24 +56,21 @@ Frog Form Control CSS File
 ::slotted(input[type='week']),
 ::slotted(textarea),
 ::slotted(select) {
-  color: var(--neutral-gray-1);
-  background-color: var(--color-white);
+  color: var(--colors-gray-1);
+  background-color: var(--colors-white);
   background-clip: padding-box;
   appearance: none;
-  border: var(--border-base);
-  border-color: var(--color-brand-accessible);
-  border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-none) var(--border-radius-none);
-  transition: border-color var(--durations-quickly) ease-in-out, box-shadow var(--durations-quickly) ease-in-out;
+  border-color: var(--colors-brand-light);
+  transition: border-color var(--duration-quickly) ease-in-out, box-shadow var(--duration-quickly) ease-in-out;
 }
 
 ::slotted(input:focus),
 ::slotted(textarea:focus),
 ::slotted(select:focus) {
-  color: var(--color-black);
-  background-color: var(--color-white);
-  border-color: var(--color-brand-dark);
+  color: var(--colors-black);
+  background-color: var(--colors-white);
+  border-color: var(--colors-brand-dark);
   outline: 0;
-  box-shadow: var(--shadow-border-highlight);
 }
 
 ::slotted(input[type='date']:required),
@@ -104,7 +99,6 @@ Frog Form Control CSS File
 ::slotted(input[type='week'][aria-required='true']),
 ::slotted(textarea:required),
 ::slotted(textarea[aria-required='true']) {
-  background-image: var(--icons-solid-star-orange);
   background-size: var(--spacing-sm) var(--spacing-sm);
   background-position: right var(--spacing-xs) top var(--spacing-xs);
   background-repeat: no-repeat;
@@ -138,7 +132,6 @@ Frog Form Control CSS File
   white-space: nowrap;
   vertical-align: middle;
   text-decoration: none;
-  border-radius: var(--border-radius-md);
   padding: var(--spacing-base) var(--spacing-md) var(--spacing-base) var(--spacing-md);
 }
 
@@ -155,8 +148,8 @@ Frog Form Control CSS File
 ::slotted(input[type='button']),
 ::slotted(input[type='image']),
 ::slotted(input[type='submit']) {
-  background-color: var(--color-orange);
-  color: var(--color-black);
+  background-color: var(--colors-orange);
+  color: var(--colors-black);
   border: none;
 }
 
@@ -171,16 +164,15 @@ Frog Form Control CSS File
 }
 
 ::slotted(input[type='reset']) {
-  background-color: var(--color-white);
-  color: var(--color-brand-accessible);
-  border: var(--border-thick);
-  border-color: var(--color-brand-accessible);
+  background-color: var(--colors-white);
+  color: var(--colors-brand-light);
+  border-color: var(--colors-brand-light);
 }
 
 ::slotted(input[type='reset']:hover) {
-  background-color: var(--color-brand-accessible);
-  color: var(--color-white);
-  border-color: var(--neutral-transparent);
+  background-color: var(--colors-brand-light);
+  color: var(--colors-white);
+  border-color: var(--colors-transparent);
 }
 
 /*
@@ -196,7 +188,6 @@ Frog Form Control CSS File
 }
 
 ::slotted(input[type='checkbox']) {
-  border-radius: var(--border-radius-base) var(--border-radius-base) var(--border-radius-none) var(--border-radius-none);
 }
 
 ::slotted(input[type='color']) {
@@ -215,12 +206,11 @@ Frog Form Control CSS File
 
 ::slotted(input[type='file'])::file-selector-button {
   padding: var(--spacing-2xs) var(--spacing-sm);
-  background-color: var(--color-white);
-  color: var(--color-brand-accessible);
-  border: var(--border-thick);
-  border-color: var(--color-brand-accessible);
-  transition: color var(--durations-quickly) ease-in-out, background-color var(--durations-quickly) ease-in-out, border-color var(--durations-quickly) ease-in-out,
-    box-shadow var(--durations-quickly) ease-in-out;
+  background-color: var(--colors-white);
+  color: var(--colors-brand-light);
+  border-color: var(--colors-brand-light);
+  transition: color var(--duration-quickly) ease-in-out, background-color var(--duration-quickly) ease-in-out, border-color var(--duration-quickly) ease-in-out,
+  box-shadow var(--duration-quickly) ease-in-out;
 }
 
 ::slotted(input[type='radio']) {
@@ -229,7 +219,7 @@ Frog Form Control CSS File
 
 ::slotted(input[type='range']) {
   height: var(--spacing-md);
-  background-color: var(--neutral-transparent);
+  background-color: var(--colors-transparent);
   padding: var(--spacing-0);
 }
 
