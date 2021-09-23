@@ -20,7 +20,7 @@ module.exports = {
         sourceType: 'module',
         project: './tsconfig.eslint.json',
       },
-      extends: ['plugin:@typescript-eslint/recommended', 'plugin:@stencil/recommended', 'prettier/@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       plugins: ['@typescript-eslint'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
