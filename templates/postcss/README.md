@@ -57,6 +57,8 @@ export const config: Config = {
 };
 ```
 
+NOTE: The following is not working on Node 16 and needs revising for approach on web component resets.
+
 Optionally, `@stencil-postcss` allows you to use `injectGlobalPaths` as a plugin to add stylesheets to every
 web component:
 
