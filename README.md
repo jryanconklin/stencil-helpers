@@ -23,9 +23,9 @@ These steps assume you've scaffolded a Stencil project elsewhere.
    - Add Global stylesheet `src/assets/css/index.css`
    - If desisred, create a directory structure for stylesheets via `@import` rules in `index.css` (handled by postcss)
    - Update `stencil.config.js` for global css:
-    ```javascript
-    globalStyle: 'src/assets/css/index.css'
-    ```
+     ```javascript
+     globalStyle: 'src/assets/css/index.css'
+     ```
 9. Add and Configure [PostCSS](templates/postcss/README.md)
 10. Configure [Tokens](templates/tokens/README.md)
 11. Configure Code Style and [Formatting](templates/formatting)
