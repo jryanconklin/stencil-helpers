@@ -1,0 +1,36 @@
+{
+  "font": {
+    "weight": {
+      "book": {
+        "value": "300"
+      },
+      "light": {
+        "value": "{font.weight.book.value}"
+      },
+      "regular": {
+        "value": "400"
+      },
+      "medium": {
+        "value": "500"
+      },
+      "semibold": {
+        "value": "600"
+      },
+      "bold": {
+        "value": "700"
+      }
+    },
+    "family": {
+      "serif": {
+        "value": ["\"Geller Headline\"", "Times", "serif"],
+        "type": "font",
+        "description": "The primary serif font for headings."
+      },
+      "sans": {
+        "value": ["'Halyard Text'", "Helvetica", "Arial", "sans-serif"],
+        "type": "font",
+        "description": "The primary sans-serif font for body content, etc."
+      }
+    }
+  }
+}
